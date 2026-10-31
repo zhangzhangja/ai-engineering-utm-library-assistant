@@ -37,8 +37,8 @@ UTM undergraduate students, especially new students seeking general library info
 1. **[UTM Library FAQs](https://library.utm.my/libfaq/):** Official live FAQ. Local PDF snapshots of General, Services, Facilities, and Collection were captured on 29 October 2026.
 2. **[UTM Library Membership](https://library.utm.my/library-membership-2-0/):** Student membership and account activation. Local PDF snapshot captured on 29 October 2026.
 3. **[UTM Library Rules and Etiquette](https://library.utm.my/library-rule-and-etiquette/):** General library rules. Local PDF snapshot captured on 29 October 2026.
-4. **[UTM Library Handbook 2026/2027](https://library.utm.my/handbook/):** [Online handbook](https://online.fliphtml5.com/rljlh/UTM-Library-Handbook-2026_digital/#p=1); no local PDF copy has been obtained.
-5. **[UTM Library FAQs 2025 Compilation](https://library.utm.my/libfaq/2025_compilation/):** [Online reader](https://heyzine.com/flip-book/2103199415.html), the latest available compilation as of 29 October 2026.
+4. **[UTM Library Handbook 2026/2027](https://library.utm.my/handbook/):** [Online handbook](https://online.fliphtml5.com/rljlh/UTM-Library-Handbook-2026_digital/#p=1). Local 76-page snapshot `UTM Library Handbook 2026-2027.pdf` was exported from the official reader and visually checked on 1 November 2026; it is an image-based snapshot, not a publisher-issued download.
+5. **[UTM Library FAQs 2025 Compilation](https://library.utm.my/libfaq/2025_compilation/):** [Online reader](https://heyzine.com/flip-book/2103199415.html), the latest available compilation as of 29 October 2026. Local 85-page snapshot `UTM Library FAQs 2025 Compilation.pdf` was exported from the reader and visually checked on 1 November 2026; it is not a publisher-issued download.
 
 Printed PDF snapshots and their original webpages represent the same sources. Before using content, check relevance, duplicate entries, dates, campus, student category, and conflicting information. Do not commit copyrighted source documents to this public repository.
 
@@ -53,4 +53,5 @@ Printed PDF snapshots and their original webpages represent the same sources. Be
 | Week | Focus | Deliverable | Status |
 |---|---|---|---|
 | W1 | System analysis and project scoping | [Observation sheet](docs/week1_observation_sheet.md), [system map](docs/week1_system_map.png), [project scope](docs/week1_project_scope.md), README | Updated on GitHub; course portal PDF submission handled separately |
+| W2 | Requirements, evaluation planning and V1 architecture | [Requirements](docs/week2_requirements.md), [evaluation criteria](docs/week2_evaluation_criteria.md), [architecture diagram](docs/week2_architecture_v1.png), [architecture decisions](docs/week2_architecture_decisions.md), [source register](docs/week2_source_register.md) | Completed; source PDFs remain local pending redistribution permission |
 
