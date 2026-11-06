@@ -1,0 +1,21 @@
+{
+  "pipeline_version": "week3-v1.1",
+  "generated_at_utc": "2026-11-06T21:54:24.432186+00:00",
+  "knowledge_stage": "K2_candidate",
+  "records": [
+    {
+      "lineage_id": "L01",
+      "source_id": "S17",
+      "source_filename": "UTM Library FAQs 2025 Compilation.pdf",
+      "source_url": "https://library.utm.my/libfaq/2025_compilation/",
+      "source_version": "2025 compilation; snapshot checked in 2026",
+      "source_sha256": "0a0e9378e71d5eaf18e1fe16569f7e6aa9a75b1b410661098c82cf970e9080f9",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "2a38ce9e5b30240e879743aaa2131240a63d8dd2a9c2f23d416e8aa7f0b99d94",
+      "processing_note": "page-aware paragraph-aware character chunks; size=500; overlap=0",
+      "knowledge_stage": "K2_candidate",
+      "approval_status": "pending_authority_applicability_review",
+      "access_rights": "Publicly viewable official source; redistribution permission not verified"
+    }
+  ]
+}

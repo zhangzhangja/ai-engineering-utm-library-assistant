@@ -1,0 +1,53 @@
+{
+  "pipeline_version": "week3-v1.1",
+  "generated_at_utc": "2026-11-06T21:57:52.670335+00:00",
+  "data_type": "documents",
+  "knowledge_stage": "K2_candidate",
+  "configuration": {
+    "source_id": "S17",
+    "method": "paragraph-aware",
+    "chunk_size": 500,
+    "overlap": 0,
+    "preserve_page_locator": true
+  },
+  "processing_method": "page-aware paragraph-aware character chunks; size=500; overlap=0",
+  "sources": [
+    {
+      "source_id": "S17",
+      "path": "data/raw/UTM Library FAQs 2025 Compilation.pdf",
+      "url": "https://library.utm.my/libfaq/2025_compilation/",
+      "version": "2025 compilation; snapshot checked in 2026",
+      "sha256": "0a0e9378e71d5eaf18e1fe16569f7e6aa9a75b1b410661098c82cf970e9080f9"
+    }
+  ],
+  "outputs": [
+    "data/pipeline_v1/documents/prepared_text.jsonl"
+  ],
+  "source_output_mapping": [
+    {
+      "source": "data/raw/UTM Library FAQs 2025 Compilation.pdf",
+      "output": "data/pipeline_v1/documents/prepared_text.jsonl"
+    }
+  ],
+  "inspection": {
+    "source": "UTM Library FAQs 2025 Compilation.pdf",
+    "pages": 85,
+    "extractable_pages": 85,
+    "characters": 120965,
+    "source_sha256": "0a0e9378e71d5eaf18e1fe16569f7e6aa9a75b1b410661098c82cf970e9080f9"
+  },
+  "validation": {
+    "output_count": 1,
+    "output_sha256": [
+      "6610d1babc7e07251487e361cdb7e6a04fe89aede22522fb878d1ba97a5a00b9"
+    ],
+    "output_bytes": [
+      342752
+    ]
+  },
+  "access_rights": "Publicly viewable official source; redistribution permission not verified",
+  "known_limitations": [
+    "S17 is supplementary and cannot override S02 or a newer applicable official notice.",
+    "Prepared records require authority and applicability review before answering use."
+  ]
+}

@@ -1,10 +1,15 @@
-.env
-.env.*
-!.env.example
-.venv/
-venv/
-__pycache__/
-*.py[cod]
+# Source snapshots and generated text contain material whose redistribution
+# permission has not been verified.
+data/raw/
+data/processed/
+data/**/*.jsonl
+
+# Local transfer packages and notebook checkpoints.
+*.zip
+*.ran.ipynb
+*.executed.ipynb
+
+# Local/editor artefacts.
 .ipynb_checkpoints/
-.DS_Store
-Thumbs.db
+__pycache__/
+*.pyc

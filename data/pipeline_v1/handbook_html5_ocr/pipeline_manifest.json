@@ -1,0 +1,137 @@
+{
+  "pipeline_version": "week3-v1.1",
+  "generated_at_utc": "2026-11-06T21:57:52.716651+00:00",
+  "data_type": "documents",
+  "pathway": "A — PDF/HTML5 document ingestion with page OCR fallback",
+  "knowledge_stage": "K2_candidate",
+  "source_priority": "S02 primary authority; S17 supplementary and cannot override S02.",
+  "source": {
+    "source_id": "S02",
+    "authority_url": "https://online.fliphtml5.com/rljlh/UTM-Library-Handbook-2026_digital/",
+    "version": "2026/2027 edition",
+    "snapshot_path": "data/raw/UTM Library Handbook 2026-2027.pdf",
+    "snapshot_sha256": "d797976979b9cc402733e9ece2708e2c7b0dd459573e23afa171468dac091fcf",
+    "html5_config_url": "https://online.fliphtml5.com/rljlh/UTM-Library-Handbook-2026_digital/javascript/config.js",
+    "html5_config_sha256": "6b2f31001ad2a2f3aba143625cd68d4dd08dfe0222efac53b63472f0002e32f7"
+  },
+  "scope": {
+    "selected_pages": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      35,
+      49,
+      50,
+      51,
+      52
+    ],
+    "selected_page_count": 22,
+    "selection_basis": "Official HTML5 outline aligned with the Week 2 V1 undergraduate service-policy scope.",
+    "requirement_mapping": {
+      "FR1": "pages 17–29, 35 and 49–52: membership, borrowing, renewal, fines and services",
+      "FR2": "multiple selected policy sections retained with page locators",
+      "FR3_RAI1": "every output record preserves source and page provenance"
+    },
+    "excluded_pages": "Outside the current V1 service-policy scope; deferred, not rejected.",
+    "ocr_engine": "Tesseract",
+    "ocr_engine_version": "5.3.4",
+    "ocr_dpi": 200,
+    "ocr_config": "--oem 3 --psm 6",
+    "package_versions": {
+      "pypdf": "7.0.0",
+      "PyMuPDF": "2.1",
+      "pytesseract": "0.3.13",
+      "Pillow": "11.3.0",
+      "matplotlib": "3.10.0",
+      "requests": "2.32.4"
+    }
+  },
+  "processing": {
+    "html5_role": "identity, page count, outline and OCR anchors",
+    "body_text_method": "page OCR from frozen official-origin snapshot",
+    "ocr_engine": "Tesseract",
+    "ocr_engine_version": "5.3.4",
+    "ocr_dpi": 200,
+    "ocr_config": "--oem 3 --psm 6",
+    "chunking": "paragraph-aware; size=500; overlap=0; page boundaries retained"
+  },
+  "source_output_mapping": [
+    {
+      "source": "https://online.fliphtml5.com/rljlh/UTM-Library-Handbook-2026_digital/",
+      "output": "data/pipeline_v1/handbook_html5_ocr/html5_acquisition_audit.json"
+    },
+    {
+      "source": "data/raw/UTM Library Handbook 2026-2027.pdf",
+      "output": "data/pipeline_v1/handbook_html5_ocr/interim/handbook_ocr_raw.jsonl"
+    },
+    {
+      "source": "data/pipeline_v1/handbook_html5_ocr/interim/handbook_ocr_raw.jsonl",
+      "output": "data/pipeline_v1/handbook_html5_ocr/prepared_handbook_text.jsonl"
+    },
+    {
+      "source": "data/pipeline_v1/handbook_html5_ocr/prepared_handbook_text.jsonl",
+      "output": "data/pipeline_v1/handbook_html5_ocr/handbook_manual_review_queue.jsonl"
+    }
+  ],
+  "validation": {
+    "selected_pages": 22,
+    "ocr_non_empty_pages": 22,
+    "automatic_screen_review_pages": [
+      17,
+      24,
+      27
+    ],
+    "candidate_record_count": 67,
+    "manual_review_queue_records": 5,
+    "prepared_output_bytes": 89669,
+    "prepared_output_sha256": "b2c3847b079565468dea77cdd313f82a075ce450db74f1e741f3c4aa22e46ebf",
+    "validation_guards": {
+      "non_empty_output": true,
+      "required_schema": true,
+      "unique_record_ids": true,
+      "checksum_reproduced": true
+    },
+    "repeatability_scope": "deterministic post-OCR chunk preparation and JSONL serialization; OCR itself was not rerun",
+    "repeatability_sha256": "b2c3847b079565468dea77cdd313f82a075ce450db74f1e741f3c4aa22e46ebf",
+    "repeatability_status": "PASS",
+    "approved_for_answering": false
+  },
+  "failure_points": [
+    {
+      "id": "FP-01",
+      "stage": "INSPECT / ROUTE",
+      "condition": "Native PDF extraction returns zero usable characters or zero extractable pages.",
+      "detector": "native_character_count == 0 or native_extractable_pages == 0",
+      "response": "Do not chunk empty text; route S02 to official HTML5 metadata acquisition plus page OCR.",
+      "observed_status": "TRIGGERED — 0 extractable pages / 0 usable characters"
+    },
+    {
+      "id": "FP-02",
+      "stage": "OCR QUALITY GATE",
+      "condition": "A selected OCR page fails the minimum text-length or alphanumeric-ratio screen.",
+      "detector": "character_count < 120 or alnum_ratio < 0.45",
+      "response": "Place affected page records in the manual review queue; keep all S02 records blocked from answering.",
+      "observed_status": "TRIGGERED — manual review queue pages 17, 24, 27"
+    }
+  ],
+  "known_limitations": [
+    "The public HTML5 configuration is not treated as a complete body-text API.",
+    "OCR may alter tables, amounts, durations or eligibility conditions.",
+    "Every S02 candidate requires rendered-page review before answering use.",
+    "The current V1 scope selects 22 of 76 pages."
+  ]
+}

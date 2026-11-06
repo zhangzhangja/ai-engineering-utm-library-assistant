@@ -1,0 +1,25 @@
+{
+  "pipeline_version": "week3-v1.1",
+  "generated_at_utc": "2026-11-06T21:57:52.718992+00:00",
+  "source_policy": {
+    "primary": "S02 UTM Library Handbook 2026/2027",
+    "supplementary": "S17 UTM Library FAQs 2025 Compilation",
+    "conflict_rule": "S17 never overrides S02 or a newer applicable official page/notice."
+  },
+  "branches": [
+    {
+      "source_id": "S02",
+      "manifest": "data/pipeline_v1/handbook_html5_ocr/pipeline_manifest.json",
+      "manifest_sha256": "bbad4c40ca7301689d69593a4b3d1e5a77806f40a42d92dbe126380e5bdc4f53",
+      "knowledge_stage": "K2_candidate",
+      "answering_status": "BLOCKED pending rendered-page review"
+    },
+    {
+      "source_id": "S17",
+      "manifest": "data/pipeline_v1/documents/pipeline_manifest.json",
+      "manifest_sha256": "393f79a970065e299128939115e95bf43d7372a20e1e71feb167b8d043f2174d",
+      "knowledge_stage": "K2_candidate",
+      "answering_status": "Supplementary; authority/applicability review required"
+    }
+  ]
+}

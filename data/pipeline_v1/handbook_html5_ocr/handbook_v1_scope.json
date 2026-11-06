@@ -1,0 +1,46 @@
+{
+  "selected_pages": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    35,
+    49,
+    50,
+    51,
+    52
+  ],
+  "selected_page_count": 22,
+  "selection_basis": "Official HTML5 outline aligned with the Week 2 V1 undergraduate service-policy scope.",
+  "requirement_mapping": {
+    "FR1": "pages 17–29, 35 and 49–52: membership, borrowing, renewal, fines and services",
+    "FR2": "multiple selected policy sections retained with page locators",
+    "FR3_RAI1": "every output record preserves source and page provenance"
+  },
+  "excluded_pages": "Outside the current V1 service-policy scope; deferred, not rejected.",
+  "ocr_engine": "Tesseract",
+  "ocr_engine_version": "5.3.4",
+  "ocr_dpi": 200,
+  "ocr_config": "--oem 3 --psm 6",
+  "package_versions": {
+    "pypdf": "7.0.0",
+    "PyMuPDF": "2.1",
+    "pytesseract": "0.3.13",
+    "Pillow": "11.3.0",
+    "matplotlib": "3.10.0",
+    "requests": "2.32.4"
+  }
+}
