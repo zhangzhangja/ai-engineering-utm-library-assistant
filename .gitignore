@@ -9,7 +9,14 @@ data/**/*.jsonl
 *.ran.ipynb
 *.executed.ipynb
 
-# Local/editor artefacts.
+# Environment, Python and local/editor artefacts.
+.env
+.env.*
+!.env.example
+.venv/
+venv/
 .ipynb_checkpoints/
 __pycache__/
-*.pyc
+*.py[cod]
+.DS_Store
+Thumbs.db
