@@ -74,13 +74,15 @@ The executed Colab run completed without errors and produced:
 
 The raw PDFs, OCR text, prepared JSONL files and manual-review records remain outside the public repository because redistribution permission has not been verified. Their filenames, hashes, counts and processing relationships remain documented in the committed manifests.
 
+The Week 2 and Week 3 diagrams use the same question-and-answer flow (A1-A6 and E0). Week 3 expands K1-K2 within DATA into the two executed document branches, six pipeline stages, failure responses and lineage outputs. Candidate review remains separate from K3 approved knowledge. The notebook regenerates the diagram in its diagram cell and refreshes run-specific observations from the preceding cells.
+
 ### Reproducing the Colab run
 
 1. Open `notebooks/week3_pipeline.ipynb` in Google Colab.
-2. Upload `UTM Library Handbook 2026-2027.pdf` and `UTM Library FAQs 2025 Compilation.pdf` when prompted.
+2. One-time setup: place `UTM Library Handbook 2026-2027.pdf` and `UTM Library FAQs 2025 Compilation.pdf` in your Google Drive folder `MyDrive/AE_Lab3/inputs/`. Cell 2 mounts Drive and copies them into the workspace automatically (it falls back to manual upload only if that folder is empty).
 3. Run all cells from top to bottom.
 4. Confirm `FINAL CHECKPOINT PASS` in the final validation cell.
-5. Keep the downloaded artefact ZIP private unless redistribution permission is confirmed.
+5. Cell 26 saves the artefact ZIP to `MyDrive/AE_Lab3/outputs/`, overwriting the previous one each run. Keep it private unless redistribution permission is confirmed.
 
 ## Responsible AI Risks
 
