@@ -141,6 +141,25 @@ data. For fee, fines, loan and replacement values, Topic 7 should retrieve the v
 S02 OCR text. These corpus files stay local because source-text redistribution permission is not verified;
 only public-safe evidence is committed.
 
+## Google Drive layout for Colab
+
+The Colab notebooks read inputs from and write outputs to a fixed per-lab Google Drive layout, so you
+set a folder up once and do not upload files by hand each session.
+
+Convention: `MyDrive/AE_Labs/AE_Lab<N>/inputs` and `MyDrive/AE_Labs/AE_Lab<N>/outputs`.
+
+| Lab | `inputs/` (you place these) | `outputs/` (the notebook writes these) |
+|---|---|---|
+| AE_Lab3 | the two source PDFs (handbook + FAQ) | the Week 3 artefact ZIP |
+| AE_Lab4 | `prepared_text.jsonl` and `prepared_handbook_text.jsonl` (Week 3 outputs) | reviewed corpus plus the week4 evidence files |
+
+How the notebooks use it: each notebook mounts Drive (authorise once per session), then reads from
+`INPUT_DIR` (`.../inputs`) and saves to `OUTPUT_DIR` (`.../outputs`). If Drive is not mounted it falls
+back to `/content` (manual upload) and does not crash.
+
+Governance: the `outputs/` folders can contain extracted source text, so keep them private in your own
+Drive. Only metadata and evidence files are committed to this repository.
+
 ## Responsible AI Risks
 
 - **Incorrect or outdated information:** Cite sources, record source dates, and flag missing or conflicting evidence.
