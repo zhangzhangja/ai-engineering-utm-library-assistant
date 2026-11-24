@@ -1,10 +1,10 @@
 category,item_type,value,unit,status,primary_source,corroborating_source,note
-loan,Open Access,10 books / 2 weeks,per loan,Verified,S02 p18,S09,2 renewals
-loan,Closed Access Book,3 books / 3 days,per loan,Verified,S02 p25,S09,
-loan,Bound Journals,3 books / 3 days,per loan,Verified,S02 p25,S09,
-loan,Current Journals,3 books / 3 days,per loan,Verified,S02 p25,S09,
-loan,Reference Books,3 books / 3 days,per loan,Verified,S02 p25,S09,
-loan,Audio Visual,Not for loan,-,Verified,S02 p25,S09,
+loan,Open Access,10 books / 2 weeks,per loan,Verified,S02 p25 (rendered),S09,2 renewals
+loan,Closed Access,1 item / 2 days,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3/3days - handbook governs
+loan,Bound Journals,1 book / 3 days,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3 - handbook governs
+loan,Current Journals,1 book / overnight,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3/3days - handbook governs
+loan,Reference,1 book / 3 days,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3 - handbook governs
+loan,Audio Visual,1 item / 2 hours or overnight,per loan,Verified,S02 p25 (rendered),,loanable - S09 webpage wrongly said not-for-loan
 fine,Open Access,RM0.20,per day,Verified,S02 FINES page,S09/S16,
 fine,Closed Access,RM0.50,per day,Verified,S02 FINES page,S09,rendered page confirms per day; S16 per-hour outdated
 fine,Reference,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated

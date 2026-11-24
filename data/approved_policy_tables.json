@@ -4,7 +4,7 @@
   "scope": "UTM undergraduate library services (V1)",
   "knowledge_stage": "K3_approved",
   "approved_for_answering": true,
-  "authority_note": "Primary authority is the S02 UTM Library Handbook 2026/2027, verified against its rendered pages. Official UTM webpages (S09/S15/S16) corroborate. Where S16 (Fines page) disagreed on journal/reference/closed-access rates, the handbook governs (RM0.50 per day).",
+  "authority_note": "Primary authority is the S02 UTM Library Handbook 2026/2027, verified against its rendered pages. Official UTM webpages (S09/S15/S16) corroborate. Where S16 (Fines page) disagreed on journal/reference/closed-access rates, the handbook governs (RM0.50 per day). Correction: the S09 loan-periods webpage conflicts with the handbook on undergraduate per-material limits (webpage says 3 items; handbook says 1 and lists Audio Visual as loanable 2h/overnight). The handbook (rendered page) governs.",
   "rights_status": "Source-text redistribution not yet verified; these records hold factual figures with attribution, not source prose. See docs/week4_rights_verification.md.",
   "usage": "Topic 7 may embed and retrieve the 'retrieval_records' directly; each carries authority_rank=1 and page provenance so answers can cite source and page (FR3/RAI1). Do not override these with lower-authority OCR text.",
   "sources": {
@@ -43,117 +43,109 @@
         "renewals": 2
       },
       "source_id": "S02",
-      "page": [
-        18,
-        25
-      ],
+      "page": 25,
       "corroborated_by": [
         "S09"
       ],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24"
     },
     {
       "id": "POL-LOAN-UG-CLOSED",
       "topic": "circulation.loan",
       "applies_to": "undergraduate (Degree) student",
-      "statement": "An undergraduate may borrow 3 Closed Access books for 3 days.",
+      "statement": "An undergraduate may borrow 1 Closed Access item for 2 days.",
       "value": {
-        "material": "Closed Access Book",
-        "items_allowed": 3,
-        "loan_period": "3 days"
+        "material": "Closed Access",
+        "items_allowed": 1,
+        "loan_period": "2 days"
       },
       "source_id": "S02",
       "page": 25,
-      "corroborated_by": [
-        "S09"
-      ],
+      "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
       "id": "POL-LOAN-UG-BJ",
       "topic": "circulation.loan",
       "applies_to": "undergraduate (Degree) student",
-      "statement": "An undergraduate may borrow 3 Bound Journals for 3 days.",
+      "statement": "An undergraduate may borrow 1 Bound Journal for 3 days.",
       "value": {
         "material": "Bound Journals",
-        "items_allowed": 3,
+        "items_allowed": 1,
         "loan_period": "3 days"
       },
       "source_id": "S02",
       "page": 25,
-      "corroborated_by": [
-        "S09"
-      ],
+      "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
       "id": "POL-LOAN-UG-CJ",
       "topic": "circulation.loan",
       "applies_to": "undergraduate (Degree) student",
-      "statement": "An undergraduate may borrow 3 Current Journals for 3 days.",
+      "statement": "An undergraduate may borrow 1 Current Journal overnight.",
       "value": {
         "material": "Current Journals",
-        "items_allowed": 3,
-        "loan_period": "3 days"
+        "items_allowed": 1,
+        "loan_period": "overnight"
       },
       "source_id": "S02",
       "page": 25,
-      "corroborated_by": [
-        "S09"
-      ],
+      "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
       "id": "POL-LOAN-UG-REF",
       "topic": "circulation.loan",
       "applies_to": "undergraduate (Degree) student",
-      "statement": "An undergraduate may borrow 3 Reference Books for 3 days.",
+      "statement": "An undergraduate may borrow 1 Reference Book for 3 days.",
       "value": {
         "material": "Reference Books",
-        "items_allowed": 3,
+        "items_allowed": 1,
         "loan_period": "3 days"
       },
       "source_id": "S02",
       "page": 25,
-      "corroborated_by": [
-        "S09"
-      ],
+      "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
       "id": "POL-LOAN-UG-AV",
       "topic": "circulation.loan",
       "applies_to": "undergraduate (Degree) student",
-      "statement": "Audio Visual Materials are not for loan to undergraduate students.",
+      "statement": "An undergraduate may borrow 1 Audio Visual item for 2 hours or overnight.",
       "value": {
         "material": "Audio Visual Materials",
-        "items_allowed": 0,
-        "loan_period": "not for loan"
+        "items_allowed": 1,
+        "loan_period": "2 hours / overnight"
       },
       "source_id": "S02",
       "page": 25,
-      "corroborated_by": [
-        "S09"
-      ],
+      "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
       "id": "POL-FINE-OPEN",

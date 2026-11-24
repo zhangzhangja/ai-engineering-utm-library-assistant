@@ -20,13 +20,22 @@ an HTML page disagreed with the authority, the handbook governs and the HTML fig
 | Material type | Items allowed | Loan period | Renewal |
 |---|---|---|---|
 | Open Access | 10 books | 2 weeks | 2 times |
-| Closed Access Book | 3 books | 3 days | per policy |
-| Bound Journals | 3 books | 3 days | per policy |
-| Current Journals | 3 books | 3 days | per policy |
-| Reference Books | 3 books | 3 days | per policy |
-| Audio Visual Materials | Not for loan | - | - |
+| Closed Access | 1 item | 2 days | per policy |
+| Bound Journals | 1 book | 3 days | per policy |
+| Current Journals | 1 book | overnight | per policy |
+| Reference Books | 1 book | 3 days | per policy |
+| Audio Visual Materials | 1 item | 2 hours / overnight | per policy |
 
-Verified against S02 p18/p25 and S09. Undergraduate = "Degree" student.
+Verified against the rendered handbook undergraduate loan table (page 25) and the student-memberships
+page (Degree = 10 Open Access books / 2 weeks, 2 renewals). Undergraduate = Foundation / Diploma /
+Degree student.
+
+**Conflict found and resolved.** The official loan-periods webpage (S09) lists the undergraduate
+limits as 3 items / 3 days for closed access and journals, and marks Audio Visual as "not for loan".
+The handbook (primary authority) instead allows 1 item each, with Current Journals overnight and Audio
+Visual loanable for 2 hours / overnight. The handbook governs, so the values above are from the
+handbook, not the webpage. This is a second webpage-vs-handbook conflict (after the journal fines) and
+reinforces that Topic 7 must answer from the handbook authority, not the webpage.
 
 ## Table 2 - Overdue fines (Verified against rendered handbook FINES page)
 

@@ -24,3 +24,6 @@ Thumbs.db
 
 # Temporary local S02 page-review images (copyrighted source, keep local)
 data/_tmp_review/
+
+# Local working checklist, not for submission
+docs/week4_handoff.md

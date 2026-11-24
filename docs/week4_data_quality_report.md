@@ -35,7 +35,7 @@ Remediation applied in this review (all recorded, none silent):
 |---|---:|---|---|
 | Completeness | 4 | 0 of 373 chunks miss `text`, `source_id`, `source_url`, `page` or `version` (rules R1-R4 pass). Topic tags now present (`faq_section`, `handbook_section`). S02 policy text covers 19 handbook pages. | Field and topic completeness accepted; confirm no supported-task policy is missing from S02. |
 | Consistency | 5 | One uniform schema; one overlap-based chunking scheme after re-chunk; source precedence encoded as `authority_rank`; 0 exact duplicates; no whitespace noise. | 11 high-confidence spacing splits in S17 were dictionary-merged and logged; a few acronym splits (for example `U TMKL`) are left untouched as low-risk. |
-| Accuracy | 4 | `U+FFFD` stripped (R5 = 0) and the 5 OCR-garbled divider pages excluded. The critical S02 tables (loan periods, fines, replacement charges, registration) were verified against the rendered handbook pages (`docs/week4_fee_fines_crosscheck.md`), resolving the S09-vs-S16 fine conflict; no open table flags remain. Non-table S02 prose is still OCR and unverified. | Verify remaining non-table S02 prose if used for answering. |
+| Accuracy | 4 | `U+FFFD` stripped (R5 = 0) and the 5 OCR-garbled divider pages excluded. The critical S02 tables (loan periods, fines, replacement charges, registration) were verified against the rendered handbook pages (`docs/week4_fee_fines_crosscheck.md`), resolving two webpage-vs-handbook conflicts (journal fines and undergraduate loan limits); no open table flags remain. Non-table S02 prose is still OCR and unverified. | Verify remaining non-table S02 prose if used for answering. |
 | Timeliness | 3 | Every chunk carries `version` and `capture_date` (S17 = 2025; S02 = 2026/2027). Applicability to the current academic year is not machine-verifiable. | Keep source-precedence and timeliness metadata; resolve applicability by human review. |
 | Uniqueness | 5 | 0 exact duplicates after page reconstruction (the earlier S17 page-32 repeat is resolved). Near-duplicate and cross-source overlap not yet checked. | Add near-duplicate and S17/S02 overlap review later. |
 
@@ -134,9 +134,11 @@ At least two evidence-based bias risks, with propagation path:
    Origin: measurement, OCR approximates the rendered page. Propagation: wrong facts (hours, fines)
    if an unverified OCR table were used. Intervention: fee, fines and loan
    tables were cross-checked against the official HTML pages (`docs/week4_fee_fines_crosscheck.md`),
-   verifying most values and resolving the S09-vs-S16 journal-fine conflict (RM0.50/day by authority),
-   with only 3 narrow items left for the rendered-page check; the answering gate keeps S02 blocked
-   meanwhile. System test in Topic 8: OCR text versus rendered page.
+   verifying most values and resolving two webpage-vs-handbook conflicts by the handbook authority: the
+   S09-vs-S16 journal fine (RM0.50/day) and the undergraduate loan limits (handbook allows 1 item each
+   with Audio Visual loanable 2 hours/overnight, against the S09 webpage figure of 3 items and
+   "not for loan"). All table flags are now cleared against the rendered handbook pages; the answering
+   gate keeps S02 blocked meanwhile. System test in Topic 8: OCR text versus rendered page.
 
 A third, historical risk is recorded: S17 is the 2025 compilation while S02 is 2026/2027, so older
 supplementary content could carry superseded policy. Intervention: source precedence (`authority_rank`)
