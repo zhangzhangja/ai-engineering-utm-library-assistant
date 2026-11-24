@@ -1,0 +1,13 @@
+record_id,source,page,reason,evidence,section
+S17-p001-c001,S17,1,"FAQ navigation page (cover or section divider), no Q&A content",section label only,COVER
+S17-p002-c001,S17,2,"FAQ navigation page (cover or section divider), no Q&A content",section label only,GENERAL
+S17-p030-c001,S17,30,"FAQ navigation page (cover or section divider), no Q&A content",section label only,SERVICES
+S17-p042-c001,S17,42,"FAQ navigation page (cover or section divider), no Q&A content",section label only,FACILITIES
+S17-p051-c001,S17,51,"FAQ navigation page (cover or section divider), no Q&A content",section label only,COLLECTIONS
+S17-p063-c001,S17,63,"FAQ navigation page (cover or section divider), no Q&A content",section label only,ACQUISITIONS
+S17-p071-c001,S17,71,"FAQ navigation page (cover or section divider), no Q&A content",section label only,OTHERS
+S02-p017-c001,S02,17,"section-divider photo page (no policy text), confirmed by rendered-page review",title banner over library photo; OCR garble persists at 300 DPI,
+S02-p017-c002,S02,17,"section-divider photo page (no policy text), confirmed by rendered-page review",title banner over library photo; OCR garble persists at 300 DPI,
+S02-p024-c001,S02,24,"section-divider photo page (no policy text), confirmed by rendered-page review",title banner over library photo; OCR garble persists at 300 DPI,
+S02-p027-c001,S02,27,"section-divider photo page (no policy text), confirmed by rendered-page review",title banner over library photo; OCR garble persists at 300 DPI,
+S02-p027-c002,S02,27,"section-divider photo page (no policy text), confirmed by rendered-page review",title banner over library photo; OCR garble persists at 300 DPI,

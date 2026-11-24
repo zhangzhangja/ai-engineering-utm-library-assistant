@@ -1,0 +1,12 @@
+rule,requirement,severity,classification,chunk_id,record_id,source,page,char_count,preview
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,9,S17-p004-c001,S17,4,47,"4. UTM Pagoh Library (EDU HUB PAGOH), UT"
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,70,S17-p031-c001,S17,31,28,UTM LIBRARY BORROWING/BORROW
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,91,S17-p035-c001,S17,35,33,UTM LIBRARY CASH PAYMENT/CASHLESS
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,219,S17-p066-c001,S17,66,33,UTM LIBRARY COLLECTION SUGGESTION
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,224,S17-p067-c001,S17,67,28,UTM LIBRARY TITLE SUGGESTION
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,237,S17-p070-c001,S17,70,37,UTM LIBRARY CATALOGING UNIT-OBJECTIVE
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,276,S17-p078-c001,S17,78,41,UTM LIBRARY IN-HOUSE SYSTEM & APPLICATIO
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,296,S17-p082-c001,S17,82,28,TERMINOLOGY & ABBREVIATION
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,301,S17-p084-c001,S17,84,14,UTM-IR / UTMIR
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,308,S17-p085-c001,S17,85,14,ISO 9001: 2015
+R6 min_useful_length,FR2 completeness,REVIEW,short-heading,358,S02-p029-c004,S02,29,33,History in their Library Account.

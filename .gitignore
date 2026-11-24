@@ -3,6 +3,7 @@
 data/raw/
 data/processed/
 data/**/*.jsonl
+data/**/*.pkl
 
 # Local transfer packages and notebook checkpoints.
 *.zip
@@ -20,3 +21,6 @@ __pycache__/
 *.py[cod]
 .DS_Store
 Thumbs.db
+
+# Temporary local S02 page-review images (copyrighted source, keep local)
+data/_tmp_review/

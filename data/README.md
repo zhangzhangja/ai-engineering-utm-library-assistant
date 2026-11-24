@@ -11,6 +11,8 @@ This directory contains public-safe lineage and execution metadata for the Week 
 - `pipeline_v1/handbook_html5_ocr/html5_acquisition_audit.json`: Official HTML5 publication audit.
 - `pipeline_v1/handbook_html5_ocr/pipeline_manifest.json`: S02 OCR-branch processing and validation metadata.
 
+- `approved_policy_tables.json`: Topic 4 verified fee, fines, loan and replacement tables (K3-approved, factual figures with source and page provenance) for Topic 7 retrieval.
+
 ## Retained locally
 
 The following generated or source-content files are intentionally excluded from the public repository:

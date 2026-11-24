@@ -84,6 +84,63 @@ The Week 2 and Week 3 diagrams use the same question-and-answer flow (A1-A6 and 
 4. Confirm `FINAL CHECKPOINT PASS` in the final validation cell.
 5. Cell 26 saves the artefact ZIP to `MyDrive/AE_Lab3/outputs/`, overwriting the previous one each run. Keep it private unless redistribution permission is confirmed.
 
+## Week 4 Data Quality and Responsible Data Review
+
+Week 4 validates, reviews, governs and remediates the Topic 3 prepared corpus before any retrieval
+work. No model or embedding call is made. The Topic 3 per-source files (S17 FAQ and S02 handbook) are
+combined (418 chunks) and reduced to a reviewed corpus of 373 chunks (S17 311, S02 62).
+
+Remediation applied (all recorded, none silent):
+
+- S17 re-chunked with overlap (paragraph/sentence aware, size 500, overlap 80): broken fragments such
+  as `ties.` or `Lumpur` are gone; 20 fragments became 11 complete headings.
+- 7 S17 FAQ navigation pages (cover + section dividers) and 5 S02 divider photo pages excluded and
+  logged ([excluded-records log](docs/week4_excluded_records.csv)); divider titles kept as
+  `faq_section` / `handbook_section` topic tags.
+- 4 S17 lost `U+FFFD` symbols stripped; the S17 page-32 duplicate removed during reconstruction.
+- Source precedence made operational: every chunk now carries `authority_rank` (S02 = 1 primary,
+  S17 = 2 supplementary).
+- 11 broken-word spacing splits in S17 (`Ema il`, `Ma terials`) dictionary-merged and logged;
+  near-duplicate and cross-source overlap checked lexically (4 within-source pairs flagged, 0
+  cross-source); S02 supported-task coverage confirmed (membership, borrowing/renewal, fines/rules). The fee, fines and loan tables were cross-checked against the official UTM HTML pages, verifying most values and resolving the S09-vs-S16 journal-fine conflict (RM0.50/day by handbook authority). The fee, fines, replacement and registration tables were then verified against the rendered handbook pages, so no open table flags remain.
+
+Headline findings (full evidence in the report):
+
+- Completeness and traceability pass: 0 of 373 chunks miss text, source id, URL, page or version.
+  Nothing is answerable before review (`approved_for_answering = False` for all K2 candidates).
+- Extraction noise resolved: replacement-character and broken-fragment issues cleared; the
+  OCR-garbled handbook pages were confirmed to be decorative dividers, not lost policy text.
+- Representation signal: the primary authority S02 is 16.6 percent of chunks (19 policy pages) versus
+  supplementary S17 at 83.4 percent, driven by the handbook being an image-only, photo-heavy source.
+- S02 300 DPI re-OCR was tested and held: the local OCR engine misread text and tables stayed
+  jumbled, so it is deferred to Colab (tesseract 5.3.4) plus human table review rather than degrading
+  the primary source.
+- Quality gate: **GO WITH CONDITIONS**. The S02 fee/fines/loan tables are now verified against the rendered handbook pages (no open flags);
+  the remaining conditions are source-text redistribution rights and making Topic 7 retrieval honour
+  `authority_rank`.
+
+### Week 4 repository artefacts
+
+- [Quality notebook](notebooks/week4_quality.ipynb)
+- [Data quality, bias and responsible data report](docs/week4_data_quality_report.md)
+- [Validation failure register](docs/week4_validation_failures.csv)
+- [Duplicate review register](docs/week4_duplicate_review.csv)
+- [Excluded-records log](docs/week4_excluded_records.csv)
+- [De-spacing log](docs/week4_s17_despacing.csv)
+- [Near-duplicate review](docs/week4_near_duplicate_review.csv)
+- [Source rights-verification record](docs/week4_rights_verification.md)
+- [Fee/fines/loan cross-check](docs/week4_fee_fines_crosscheck.md) + [verified table](docs/week4_verified_fees.csv)
+- [Approved policy tables for Topic 7](data/approved_policy_tables.json) (K3, structured, with page provenance)
+- [Coverage chart](docs/week4_coverage_by_source.png)
+
+The reviewed corpus (`data/prepared_chunks_clean.jsonl` and `data/chunks_clean.pkl`) is the Topic 4
+output that later stages must use. From **Topic 7 (Week 9)** onward, embedding, indexing and retrieval
+use this reviewed Topic 4 corpus and must honour `authority_rank`, not the original Topic 3 prepared
+data. For fee, fines, loan and replacement values, Topic 7 should retrieve the verified records in
+`data/approved_policy_tables.json` (K3-approved, with source and page provenance) instead of the raw
+S02 OCR text. These corpus files stay local because source-text redistribution permission is not verified;
+only public-safe evidence is committed.
+
 ## Responsible AI Risks
 
 - **Incorrect or outdated information:** Cite sources, record source dates, and flag missing or conflicting evidence.
@@ -97,4 +154,5 @@ The Week 2 and Week 3 diagrams use the same question-and-answer flow (A1-A6 and 
 | W1 | System analysis and project scoping | [Observation sheet](docs/week1_observation_sheet.md), [system map](docs/week1_system_map.png), [project scope](docs/week1_project_scope.md), README | Updated on GitHub; course portal PDF submission handled separately |
 | W2 | Requirements, evaluation planning and V1 architecture | [Requirements](docs/week2_requirements.md), [evaluation criteria](docs/week2_evaluation_criteria.md), [architecture diagram](docs/week2_architecture_v1.png), [architecture decisions](docs/week2_architecture_decisions.md), [source register](docs/week2_source_register.md) | Completed; source PDFs remain local pending redistribution permission |
 | W3 | Data ingestion, preparation, lineage and executable V1 pipeline | [Notebook](notebooks/week3_pipeline.ipynb), [inventory](docs/week3_data_inventory.md), [diagram](docs/week3_pipeline_diagram.png), [decisions](docs/week3_pipeline_decisions.md), [manifests](data/) | Completed; public-safe evidence committed, source and prepared text retained locally |
+| W4 | Data quality, bias and responsible-data review | [Quality notebook](notebooks/week4_quality.ipynb), [report](docs/week4_data_quality_report.md), [validation register](docs/week4_validation_failures.csv), [duplicate register](docs/week4_duplicate_review.csv), [excluded-records log](docs/week4_excluded_records.csv), [de-spacing log](docs/week4_s17_despacing.csv), [near-duplicate review](docs/week4_near_duplicate_review.csv), [rights record](docs/week4_rights_verification.md), [coverage chart](docs/week4_coverage_by_source.png) | Completed; public-safe evidence committed, reviewed corpus retained locally |
 

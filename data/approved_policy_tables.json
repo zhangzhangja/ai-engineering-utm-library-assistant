@@ -1,0 +1,444 @@
+{
+  "schema": "utm-library-approved-policy-tables/v1",
+  "generated_at": "2026-11-24",
+  "scope": "UTM undergraduate library services (V1)",
+  "knowledge_stage": "K3_approved",
+  "approved_for_answering": true,
+  "authority_note": "Primary authority is the S02 UTM Library Handbook 2026/2027, verified against its rendered pages. Official UTM webpages (S09/S15/S16) corroborate. Where S16 (Fines page) disagreed on journal/reference/closed-access rates, the handbook governs (RM0.50 per day).",
+  "rights_status": "Source-text redistribution not yet verified; these records hold factual figures with attribution, not source prose. See docs/week4_rights_verification.md.",
+  "usage": "Topic 7 may embed and retrieve the 'retrieval_records' directly; each carries authority_rank=1 and page provenance so answers can cite source and page (FR3/RAI1). Do not override these with lower-authority OCR text.",
+  "sources": {
+    "S02": {
+      "title": "UTM Library Handbook 2026/2027",
+      "url": "https://online.fliphtml5.com/rljlh/UTM-Library-Handbook-2026_digital/",
+      "edition": "2026/2027",
+      "role": "primary authority"
+    },
+    "S09": {
+      "title": "Loan Periods and Fines",
+      "url": "https://library.utm.my/loan-periods-fines/",
+      "role": "official webpage (corroboration)"
+    },
+    "S15": {
+      "title": "Registration Charges",
+      "url": "https://library.utm.my/registration-charges/",
+      "role": "official webpage (corroboration)"
+    },
+    "S16": {
+      "title": "Fines",
+      "url": "https://library.utm.my/fines/",
+      "role": "official webpage (noted outdated for some fine rows)"
+    }
+  },
+  "retrieval_records": [
+    {
+      "id": "POL-LOAN-UG-OPEN",
+      "topic": "circulation.loan",
+      "applies_to": "undergraduate (Degree) student",
+      "statement": "An undergraduate (Degree) student may borrow 10 Open Access books for 2 weeks, renewable 2 times.",
+      "value": {
+        "material": "Open Access",
+        "items_allowed": 10,
+        "loan_period": "2 weeks",
+        "renewals": 2
+      },
+      "source_id": "S02",
+      "page": [
+        18,
+        25
+      ],
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-LOAN-UG-CLOSED",
+      "topic": "circulation.loan",
+      "applies_to": "undergraduate (Degree) student",
+      "statement": "An undergraduate may borrow 3 Closed Access books for 3 days.",
+      "value": {
+        "material": "Closed Access Book",
+        "items_allowed": 3,
+        "loan_period": "3 days"
+      },
+      "source_id": "S02",
+      "page": 25,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-LOAN-UG-BJ",
+      "topic": "circulation.loan",
+      "applies_to": "undergraduate (Degree) student",
+      "statement": "An undergraduate may borrow 3 Bound Journals for 3 days.",
+      "value": {
+        "material": "Bound Journals",
+        "items_allowed": 3,
+        "loan_period": "3 days"
+      },
+      "source_id": "S02",
+      "page": 25,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-LOAN-UG-CJ",
+      "topic": "circulation.loan",
+      "applies_to": "undergraduate (Degree) student",
+      "statement": "An undergraduate may borrow 3 Current Journals for 3 days.",
+      "value": {
+        "material": "Current Journals",
+        "items_allowed": 3,
+        "loan_period": "3 days"
+      },
+      "source_id": "S02",
+      "page": 25,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-LOAN-UG-REF",
+      "topic": "circulation.loan",
+      "applies_to": "undergraduate (Degree) student",
+      "statement": "An undergraduate may borrow 3 Reference Books for 3 days.",
+      "value": {
+        "material": "Reference Books",
+        "items_allowed": 3,
+        "loan_period": "3 days"
+      },
+      "source_id": "S02",
+      "page": 25,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-LOAN-UG-AV",
+      "topic": "circulation.loan",
+      "applies_to": "undergraduate (Degree) student",
+      "statement": "Audio Visual Materials are not for loan to undergraduate students.",
+      "value": {
+        "material": "Audio Visual Materials",
+        "items_allowed": 0,
+        "loan_period": "not for loan"
+      },
+      "source_id": "S02",
+      "page": 25,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-OPEN",
+      "topic": "circulation.fine",
+      "applies_to": "all borrowers",
+      "statement": "The overdue fine for Open Access materials is RM0.20 per day.",
+      "value": {
+        "material": "Open Access",
+        "fine": "RM0.20",
+        "unit": "per day"
+      },
+      "source_id": "S02",
+      "page": 28,
+      "corroborated_by": [
+        "S09",
+        "S16"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-CLOSED",
+      "topic": "circulation.fine",
+      "applies_to": "all borrowers",
+      "statement": "The overdue fine for Closed Access materials is RM0.50 per day.",
+      "value": {
+        "material": "Closed Access",
+        "fine": "RM0.50",
+        "unit": "per day"
+      },
+      "source_id": "S02",
+      "page": 28,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-REF",
+      "topic": "circulation.fine",
+      "applies_to": "all borrowers",
+      "statement": "The overdue fine for Reference materials is RM0.50 per day.",
+      "value": {
+        "material": "Reference",
+        "fine": "RM0.50",
+        "unit": "per day"
+      },
+      "source_id": "S02",
+      "page": 28,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-BJ",
+      "topic": "circulation.fine",
+      "applies_to": "all borrowers",
+      "statement": "The overdue fine for Bound Journals is RM0.50 per day.",
+      "value": {
+        "material": "Bound Journals",
+        "fine": "RM0.50",
+        "unit": "per day"
+      },
+      "source_id": "S02",
+      "page": 28,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-CJ",
+      "topic": "circulation.fine",
+      "applies_to": "all borrowers",
+      "statement": "The overdue fine for Current Journals is RM0.50 per day.",
+      "value": {
+        "material": "Current Journals",
+        "fine": "RM0.50",
+        "unit": "per day"
+      },
+      "source_id": "S02",
+      "page": 28,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-AV",
+      "topic": "circulation.fine",
+      "applies_to": "all borrowers",
+      "statement": "The overdue fine for Audio Visual Materials (external borrowing) is RM0.50 per day.",
+      "value": {
+        "material": "Audio Visual (external)",
+        "fine": "RM0.50",
+        "unit": "per day"
+      },
+      "source_id": "S02",
+      "page": 28,
+      "corroborated_by": [
+        "S09"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-FINE-ROOMKEY",
+      "topic": "facilities.fine",
+      "applies_to": "all users",
+      "statement": "A fine of RM30.00 is imposed for a lost or damaged library room key.",
+      "value": {
+        "item": "room key",
+        "fine": "RM30.00",
+        "unit": "per incident"
+      },
+      "source_id": "S02",
+      "page": 16,
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REPL-PROCESSING",
+      "topic": "circulation.replacement",
+      "applies_to": "all users",
+      "statement": "A RM25.00 processing fee applies to every lost or damaged material replacement.",
+      "value": {
+        "processing_fee": "RM25.00",
+        "unit": "per replacement"
+      },
+      "source_id": "S02",
+      "page": "REPLACEMENT page",
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REPL-BOOK",
+      "topic": "circulation.replacement",
+      "applies_to": "all users",
+      "statement": "A lost or damaged book is charged the price of the book plus a RM25.00 processing fee (or same edition/latest plus RM25.00).",
+      "value": {
+        "material": "Books",
+        "by_value": "price of book + RM25.00",
+        "by_edition": "same edition/latest + RM25.00"
+      },
+      "source_id": "S02",
+      "page": "REPLACEMENT page",
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REPL-THESIS",
+      "topic": "circulation.replacement",
+      "applies_to": "all users",
+      "statement": "A lost UTM thesis is charged RM350 (First Degree), RM450 (Masters) or RM550 (PhD) plus RM25.00 processing fee.",
+      "value": {
+        "material": "UTM Theses",
+        "first_degree": "RM350.00",
+        "masters": "RM450.00",
+        "phd": "RM550.00",
+        "processing": "RM25.00"
+      },
+      "source_id": "S02",
+      "page": "REPLACEMENT page",
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REPL-JOURNAL-ARTICLE",
+      "topic": "circulation.replacement",
+      "applies_to": "all users",
+      "statement": "A lost journal article is charged up to RM75.00 (maximum BLDSC charge) plus RM25.00 processing fee.",
+      "value": {
+        "material": "Journal Article",
+        "by_value": "RM75.00 (max BLDSC) + RM25.00"
+      },
+      "source_id": "S02",
+      "page": "REPLACEMENT page",
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REPL-MEASURED-DRAWING",
+      "topic": "circulation.replacement",
+      "applies_to": "all users",
+      "statement": "A lost measured drawing is charged RM500.00 plus RM25.00 processing fee.",
+      "value": {
+        "material": "Measured Drawings",
+        "by_value": "RM500.00 + RM25.00"
+      },
+      "source_id": "S02",
+      "page": "REPLACEMENT page",
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REPL-RARE",
+      "topic": "circulation.replacement",
+      "applies_to": "all users",
+      "statement": "A lost rare material is charged double the price of the material plus RM25.00 processing fee.",
+      "value": {
+        "material": "Rare Materials",
+        "by_value": "double price + RM25.00"
+      },
+      "source_id": "S02",
+      "page": "REPLACEMENT page",
+      "corroborated_by": [],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REG-UG-NONE",
+      "topic": "membership.registration",
+      "applies_to": "enrolled UTM undergraduate (Degree) student",
+      "statement": "Enrolled UTM undergraduate students do not pay a separate library registration or annual fee; library membership is covered by university fees.",
+      "value": {
+        "registration": "none",
+        "annual": "none",
+        "basis": "covered by university fees"
+      },
+      "source_id": "S02",
+      "page": 18,
+      "corroborated_by": [
+        "S15"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    },
+    {
+      "id": "POL-REG-TRANSFER",
+      "topic": "membership.registration",
+      "applies_to": "members with transfer",
+      "statement": "The membership transfer fee is RM50.00.",
+      "value": {
+        "fee": "RM50.00",
+        "unit": "per transfer"
+      },
+      "source_id": "S02",
+      "page": 21,
+      "corroborated_by": [
+        "S15"
+      ],
+      "authority_rank": 1,
+      "knowledge_stage": "K3_approved",
+      "approved_for_answering": true,
+      "verified": "rendered handbook page, 2026-11-24"
+    }
+  ],
+  "out_of_scope_note": "External, corporate, alumni, UTM Family and UTM SPACE membership charges exist in the handbook but are outside the undergraduate V1 scope and must never be applied to enrolled undergraduates."
+}

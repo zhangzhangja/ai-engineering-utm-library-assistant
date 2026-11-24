@@ -1,0 +1,22 @@
+category,item_type,value,unit,status,primary_source,corroborating_source,note
+loan,Open Access,10 books / 2 weeks,per loan,Verified,S02 p18,S09,2 renewals
+loan,Closed Access Book,3 books / 3 days,per loan,Verified,S02 p25,S09,
+loan,Bound Journals,3 books / 3 days,per loan,Verified,S02 p25,S09,
+loan,Current Journals,3 books / 3 days,per loan,Verified,S02 p25,S09,
+loan,Reference Books,3 books / 3 days,per loan,Verified,S02 p25,S09,
+loan,Audio Visual,Not for loan,-,Verified,S02 p25,S09,
+fine,Open Access,RM0.20,per day,Verified,S02 FINES page,S09/S16,
+fine,Closed Access,RM0.50,per day,Verified,S02 FINES page,S09,rendered page confirms per day; S16 per-hour outdated
+fine,Reference,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated
+fine,Bound Journals,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated
+fine,Current Journals,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated
+fine,Audio Visual (external),RM0.50,per day,Verified,S02 FINES page,S09,
+fine,Lost/damaged room key,RM30.00,per incident,Verified,S02 p16,,
+replacement,Books,Price of book + RM25.00,per item,Verified,S02 REPLACEMENT page,,or same edition/latest + RM25
+replacement,UTM Theses,RM350/RM450/RM550 + RM25.00,per item,Verified,S02 REPLACEMENT page,,First Degree/Masters/PhD
+replacement,Measured Drawings,RM500.00 + RM25.00,per item,Verified,S02 REPLACEMENT page,,
+replacement,Journal Article,RM75.00 + RM25.00,per item,Verified,S02 REPLACEMENT page,,max BLDSC charge
+replacement,Rare Materials,Double price + RM25.00,per item,Verified,S02 REPLACEMENT page,,
+replacement,processing fee,RM25.00,per replacement,Verified,S02 REPLACEMENT page,,applies to all replacements
+registration,Enrolled UTM undergraduate,None,-,Verified,S02 memberships pages,S15,covered by university fees; no UTM-student row
+registration,Membership transfer,RM50.00,per transfer,Verified,S02 p21,S15,
