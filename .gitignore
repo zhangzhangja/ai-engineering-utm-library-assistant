@@ -27,3 +27,6 @@ data/_tmp_review/
 
 # Local working checklist, not for submission
 docs/week4_handoff.md
+
+# Personal change history stays local.
+/CHANGELOG.md
