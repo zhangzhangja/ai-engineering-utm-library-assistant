@@ -1,17 +1,14 @@
 # Fee, Fines and Loan-Period Cross-Check - UTM Library Services Assistant
 
-Purpose: build reliable fee, fines and loan tables for the undergraduate scope by cross-checking the
-S02 handbook (primary authority) against the official UTM Library HTML pages. The hardest S02
-measurement risk (OCR tables) is now resolved: the fee/fines/membership tables were confirmed against
-the rendered handbook pages (student-supplied screenshots, reviewed 24 Nov 2026), so these values are
-verified rather than OCR-estimated.
+Purpose: document the source evidence for the undergraduate library policy records. The listed K3 facts are verified against rendered S02 handbook pages. Other OCR prose and the amount of university fees are not established; all 373 K2 chunks remain blocked.
 
 Sources: S02 Handbook 2026/2027 (primary authority; rendered-page review of FINES, REPLACEMENT,
 REFERENCE/BORROWING MEMBERSHIPS, LOAN pages); S09 loan-periods-fines page; S16 fines page; S15
 registration-charges page.
 
-Method: values are Verified where the primary authority (rendered handbook page) confirms them. Where
-an HTML page disagreed with the authority, the handbook governs and the HTML figure is marked outdated.
+Method: values are Verified where the primary authority (rendered handbook page) confirms them.
+All page numbers are one-based PDF reader system page numbers. When an HTML page disagrees with the handbook, record both values and use the
+handbook for the frozen 2026/2027 source snapshot. This does not independently establish current live policy.
 
 ---
 
@@ -37,7 +34,7 @@ Visual loanable for 2 hours / overnight. The handbook governs, so the values abo
 handbook, not the webpage. This is a second webpage-vs-handbook conflict (after the journal fines) and
 reinforces that Topic 7 must answer from the handbook authority, not the webpage.
 
-## Table 2 - Overdue fines (Verified against rendered handbook FINES page)
+## Table 2 - Overdue fines (Verified against S02 PDF page 28)
 
 | Material type | Overdue fine | Decision |
 |---|---|---|
@@ -49,10 +46,9 @@ reinforces that Topic 7 must answer from the handbook authority, not the webpage
 | Audio Visual (external borrowing) | RM0.50 per day | Verified |
 | Lost/damaged room key | RM30.00 per incident | Verified (S02 p16) |
 
-All three earlier flags are cleared. The standalone Fines page (S16) is confirmed outdated or
-inconsistent for journal, reference and closed-access rates; the handbook FINES table governs.
+The standalone Fines page (S16) is inconsistent with the S02 handbook for journal, reference and closed-access rates; the handbook FINES table governs.
 
-## Table 3 - Replacement charges for lost/damaged materials (Verified, rendered handbook page)
+## Table 3 - Replacement charges for lost/damaged materials (Verified, S02 PDF page 28)
 
 | Material | Replacement by same edition/latest | Replacement by value |
 |---|---|---|
@@ -73,23 +69,24 @@ A RM25.00 processing fee applies to every replacement.
 
 | Who | Registration | Annual | Decision |
 |---|---|---|---|
-| Enrolled UTM undergraduate (Degree) | None - covered by university fees | None | **Verified**: no UTM-student row exists; all membership tables are external/affiliate categories |
+| Registered full-time UTM undergraduate (Degree) | Not stated in the student row | "Refer university fees rate" | **Verified wording**: S02 PDF page 18 includes a UTM student row; it does not say that the annual fee is zero. For an amount, refer to the university fee schedule. |
 | UTM Alumni (Malaysian citizen, borrowing) | RM10.00 | RM10.00 | Verified (rendered page); 2 books / 1 month; outside undergraduate V1 scope |
 | UTM Alumni (non-citizen, reference) | RM10.00 | RM100.00 | Verified (rendered page); reference only; outside scope |
 | External / corporate / family / UTM SPACE | RM10.00 | RM10.00 to RM600.00 | Out of undergraduate scope; never apply to enrolled students |
 
-The earlier "alumni annual fee" flag is explained: two distinct alumni categories exist (citizen
-borrowing RM10; non-citizen reference RM100). Membership transfer fee RM50.00 confirmed.
+Alumni membership categories are outside the undergraduate V1 scope. On S02 PDF system page p21, the services description for "Corporate membership (within the country)" lists a RM50 membership transfer fee. It is a corporate membership fee and is excluded from undergraduate V1 retrieval. It is not a general undergraduate transfer fee or a staff fee. On p18, the student membership table states "Refer university fees rate"; it does not establish a zero annual fee or a separate payable registration amount.
 
 ---
 
 ## Outcome
 
-- Verified against the rendered handbook pages: undergraduate loan periods; all overdue fines
-  (RM0.20 open access, RM0.50 everything else per day); replacement charges; registration (enrolled
-  undergraduates pay nothing).
+- Verified against the rendered handbook pages: undergraduate loan periods; listed overdue fines
+  (RM0.20 open access, RM0.50 for the listed other materials per day); replacement charges;
+  and the exact undergraduate student-fee wording ("Refer university fees rate"). A zero fee is
+  not established by the source.
 - Conflict closed: S09-vs-S16 journal/reference/closed-access fine discrepancy is resolved in favour
   of the handbook (RM0.50 per day); the S16 page is outdated for these rows.
-- No open table flags remain. These values can be promoted from K2 candidate to approved knowledge
-  for the undergraduate scope, subject only to the source-rights confirmation in
-  `docs/week4_rights_verification.md`.
+- The K3 knowledge file contains 20 in-scope records with numeric PDF page locators.
+  One verified corporate transfer fee is retained for audit but excluded from undergraduate retrieval.
+  The 373 K2 candidates remain unapproved. Source-text redistribution rights are recorded in
+  `docs/week4_rights_verification.md`, and future retrieval still needs applicability and authority checks.

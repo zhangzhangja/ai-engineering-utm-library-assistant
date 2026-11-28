@@ -4,13 +4,15 @@ Project: UTM Library Services Assistant (individual semester prototype)
 Phase: Phase 1, Topic 4 (data quality and responsible data practices)
 Prepared from: the Topic 3 hand-off (S17 FAQ 2025 + S02 Handbook 2026/2027)
 Corpus under review: 418 input chunks, 373 after cleaning, re-chunking, de-spacing and exclusions
-Status: evidence for the Week 7 Proposal and the Week 14 Responsible AI review
+Status: Topic 4 data evidence for the Week 7 Proposal and Week 14 Responsible AI review
+
+All page locators use one-based PDF reader system page numbers. The knowledge file contains 20 in-scope K3 records and one excluded corporate membership record. All 373 K2 chunks remain unapproved.
 
 This report separates measured findings, engineering judgement, unresolved uncertainty, planned
 mitigation and residual risk. Ratings use a 1 to 5 scale, or N.V. (Not Verified) where evidence is
 not yet available. Embeddings, retrieval and generation are out of scope for Topic 4.
 
-Remediation applied in this review (all recorded, none silent):
+Data preparation and validation evidence:
 - S17 fragments: the source was re-chunked with overlap (paragraph and sentence aware, size 500,
   overlap 80, trailing-merge). Broken tails such as `ties.` or `Lumpur` are gone; 20 fragments became
   11 complete short headings.
@@ -20,7 +22,7 @@ Remediation applied in this review (all recorded, none silent):
 - Lost symbol: 4 S17 `U+FFFD` map-pin symbols stripped; text and URL kept.
 - Duplicate: the S17 page-32 repeat was removed during page reconstruction.
 - Topic tags added: `faq_section` (S17) and `handbook_section` (S02).
-- Source precedence made operational: `authority_rank` (S02 = 1 primary, S17 = 2 supplementary) and
+- Source precedence recorded in metadata: `authority_rank` (S02 = 1 primary, S17 = 2 supplementary) and
   `authority_tier` added to every chunk.
 - De-spacing: 11 high-confidence broken-word splits in S17 (for example `Ema il`, `Ma terials`) were
   dictionary-merged and logged (`docs/week4_s17_despacing.csv`).
@@ -33,11 +35,11 @@ Remediation applied in this review (all recorded, none silent):
 
 | Dimension | Rating (1-5 / N.V.) | Evidence | Action / limitation |
 |---|---:|---|---|
-| Completeness | 4 | 0 of 373 chunks miss `text`, `source_id`, `source_url`, `page` or `version` (rules R1-R4 pass). Topic tags now present (`faq_section`, `handbook_section`). S02 policy text covers 19 handbook pages. | Field and topic completeness accepted; confirm no supported-task policy is missing from S02. |
-| Consistency | 5 | One uniform schema; one overlap-based chunking scheme after re-chunk; source precedence encoded as `authority_rank`; 0 exact duplicates; no whitespace noise. | 11 high-confidence spacing splits in S17 were dictionary-merged and logged; a few acronym splits (for example `U TMKL`) are left untouched as low-risk. |
-| Accuracy | 4 | `U+FFFD` stripped (R5 = 0) and the 5 OCR-garbled divider pages excluded. The critical S02 tables (loan periods, fines, replacement charges, registration) were verified against the rendered handbook pages (`docs/week4_fee_fines_crosscheck.md`), resolving two webpage-vs-handbook conflicts (journal fines and undergraduate loan limits); no open table flags remain. Non-table S02 prose is still OCR and unverified. | Verify remaining non-table S02 prose if used for answering. |
+| Completeness | 4 | 0 of 373 chunks miss `text`, `source_id`, `source_url`, `page` or `version` (rules R1-R4 pass). Topic tags present (`faq_section`, `handbook_section`). S02 policy text covers 19 handbook pages. | Field and topic completeness accepted; confirm no supported-task policy is missing from S02. |
+| Consistency | 5 | One uniform schema; S17 re-chunked with overlap while S02 retains page-aware OCR chunks; source precedence is recorded as `authority_rank`; 0 exact duplicates after reconstruction. | 11 high-confidence spacing splits in S17 were dictionary-merged and logged; a few acronym splits (for example `U TMKL`) are left untouched as low-risk. |
+| Accuracy | 4 | `U+FFFD` stripped (R5 = 0) and 5 OCR-garbled chunks from 3 divider pages excluded. S02 loan, fine and replacement figures were checked against rendered handbook pages (`docs/week4_fee_fines_crosscheck.md`). The student-fee row on PDF p18 says "Refer university fees rate"; it does not establish a zero fee. Two webpage-versus-handbook conflicts were documented. Non-table S02 OCR prose remains unverified. | Verify remaining non-table S02 prose if used for answering. |
 | Timeliness | 3 | Every chunk carries `version` and `capture_date` (S17 = 2025; S02 = 2026/2027). Applicability to the current academic year is not machine-verifiable. | Keep source-precedence and timeliness metadata; resolve applicability by human review. |
-| Uniqueness | 5 | 0 exact duplicates after page reconstruction (the earlier S17 page-32 repeat is resolved). Near-duplicate and cross-source overlap not yet checked. | Add near-duplicate and S17/S02 overlap review later. |
+| Uniqueness | 5 | 0 exact duplicates after page reconstruction (the S17 page-32 repeat is resolved). Lexical review flagged 4 within-source S17 near-duplicate pairs and 0 above-threshold S17/S02 pairs. | Keep the four context-specific pairs; semantic and cross-edition overlap still need review. |
 
 ---
 
@@ -73,9 +75,9 @@ corrupted/encoding = 0 (fixed); OCR divider noise = 0 remaining (excluded); brok
 Exact deduplication used SHA-256 over whitespace-normalised text with provenance preserved
 (`docs/week4_duplicate_review.csv`).
 
-- Input 418 chunks. After dropping 7 S17 navigation pages and 5 S02 divider pages, and re-chunking
+- Input 418 chunks. After dropping 7 S17 navigation pages and 5 S02 chunks from 3 divider pages, and re-chunking
   S17 with overlap: 373 chunks (S17 311, S02 62). Exact duplicates after reconstruction: 0.
-- The earlier anomaly (S17 page-32 repeated renewal statement) is resolved: duplicate paragraphs are
+- The S17 page-32 repeated renewal statement is removed: duplicate paragraphs are
   removed during page reconstruction before re-chunking.
 - The S02 OCR anomaly (5 garbled chunks) is resolved: confirmed decorative dividers, excluded with
   evidence (`docs/week4_excluded_records.csv`).
@@ -114,11 +116,10 @@ So the share reflects extraction difficulty and document shape, not that the han
 The handbook remains the primary authority; the share is a representation signal to act on, not proof
 of inadequacy.
 
-**S02 supported-task coverage, confirmed.** A keyword scan of the kept S02 pages shows every
-supported task is represented in the primary authority: membership (pages 15-23), borrowing and
+**S02 sampled-page coverage signal.** A keyword scan of the kept S02 pages shows terms for each
+supported task in the primary authority: membership (pages 15-23), borrowing and
 renewal (pages 15-23, 28, 29, 35, 49, 51) and fines and rules (pages 15-23, 28, 29, 35, 52). The
-thinnest area is explicit loan-eligibility (3 chunks), so that section should be checked first during
-the human table review.
+thinnest area is explicit loan-eligibility (3 chunks), so its applicability and exceptions deserve special attention when freezing test cases.
 
 At least two evidence-based bias risks, with propagation path:
 
@@ -129,16 +130,14 @@ At least two evidence-based bias risks, with propagation path:
    lets retrieval prefer S02 on ties or conflicts; confirm every supported-task policy is captured
    from S02. System test in Topic 8: primary-versus-supplementary retrieval hit-rate on the 30
    answerable queries.
-2. **Measurement bias.** Evidence: the handbook is image-only, so all S02 text is OCR; the garbled
-   divider pages are excluded, but tables and numbers on the 19 kept pages are not yet verified.
-   Origin: measurement, OCR approximates the rendered page. Propagation: wrong facts (hours, fines)
-   if an unverified OCR table were used. Intervention: fee, fines and loan
-   tables were cross-checked against the official HTML pages (`docs/week4_fee_fines_crosscheck.md`),
-   verifying most values and resolving two webpage-vs-handbook conflicts by the handbook authority: the
-   S09-vs-S16 journal fine (RM0.50/day) and the undergraduate loan limits (handbook allows 1 item each
-   with Audio Visual loanable 2 hours/overnight, against the S09 webpage figure of 3 items and
-   "not for loan"). All table flags are now cleared against the rendered handbook pages; the answering
-   gate keeps S02 blocked meanwhile. System test in Topic 8: OCR text versus rendered page.
+2. **Measurement bias.** S02 is image-only. The removed divider chunks were OCR noise; loan,
+   fine and replacement values were checked directly against rendered S02 handbook pages. PDF p25
+   contains the undergraduate loan table; PDF p28 contains the fine and replacement tables. The
+   student-fee entry on PDF p18 says "Refer university fees rate", so neither a zero annual fee nor
+   a payable amount is established here. The K3 knowledge file holds 20 in-scope records
+   with numeric PDF page locators; the corporate membership-transfer fee is out of scope.
+   Unreviewed non-table OCR prose remains blocked in K2. Topic 8 must test fact accuracy and
+   applicability when retrieval is implemented.
 
 A third, historical risk is recorded: S17 is the 2025 compilation while S02 is 2026/2027, so older
 supplementary content could carry superseded policy. Intervention: source precedence (`authority_rank`)
@@ -178,8 +177,8 @@ required is in `docs/week4_rights_verification.md`.
 | Lost symbol / duplicate | 4 `U+FFFD`; 1 page-32 repeat | Symbol stripped; duplicate removed in reconstruction | Done | Resolved |
 | S17 broken-word spacing | 11 splits (`Ema il`, `Ma terials`) | Dictionary de-spaced and logged | Done (this review) | Resolved |
 | Near-duplicate FAQ instructions | 4 within-source pairs | Flagged for review, kept in page context | Done (flagged) | Low |
-| Source precedence not operational | S02 primary but count-dominated by S17 | Added `authority_rank` / `authority_tier` to every chunk | Done | Retrieval must use it in Topic 7 |
-| S02 table/number accuracy | Image-only source; OCR on 19 pages | Fee/fines/loan/replacement/registration tables verified against the rendered handbook pages; S09-vs-S16 conflict resolved | Done (rendered-page review) | Resolved for tables; non-table prose still OCR |
+| Source precedence enforcement | S02 primary but count-dominated by S17 | `authority_rank` / `authority_tier` present on every chunk | Metadata complete; runtime planned | Topic 7 retrieval must enforce precedence |
+| S02 table/number accuracy | Image-only source; OCR on 19 pages | Loan, fine and replacement figures checked against rendered pages; student-fee row states "Refer university fees rate" | Done for the listed K3 facts | Other non-table OCR prose and the amount of university fees are not established |
 | S02 re-OCR at 300 DPI | Local test: tesseract 4.1.1 misread `Users` as `OTT`; tables still jumbled | Held: not applied here to avoid degrading the primary source with an older engine | Student, in Colab with tesseract 5.3.4 | Low; optional quality gain |
 | S17 native-text spacing | `facul ties`, `U TMKL` artefacts | Note for a later despacing pass | Student, Topic 7 prep | Low |
 | Source-text redistribution rights | Both sources not verified | Confirm reuse basis; keep text local | Student and lecturer | Medium until verified |
@@ -191,13 +190,11 @@ required is in `docs/week4_rights_verification.md`.
 
 - **FR3 / RAI1 (verifiable reference).** Supported: every chunk has source id, URL and page (R2-R4
   pass). Topic tags improve locator quality. The verified fee/fines/loan values are published as
-  K3-approved retrieval records in `data/approved_policy_tables.json`, each citing source and page,
-  so Topic 7 can answer policy figures with provenance instead of unreliable OCR.
+  K3-approved retrieval records in `data/approved_policy_tables.json` (20 in-scope records), each with a numeric PDF page locator. Topic 7 can use these checked facts after applying scope and authority checks, instead of raw OCR.
 - **RAI4 (outdated information and applicability).** Partly supported: version and capture_date
   present; the answering gate (R7) blocks all K2 candidates; `authority_rank` encodes precedence.
   Risk if unresolved: an S17 2025 statement could be returned as current, failing E8/RAI4.
-- **FR1/FR2 and NFR1 (correctness).** Risk reduced by `authority_rank` and topic tags, but S02 table
-  verification is still required; otherwise the assistant may answer from supplementary FAQ.
+- **FR1/FR2 and NFR1 (correctness).** Checked S02 table facts reduce source-text risk, but the future retriever must enforce `authority_rank` and reject unsupported or out-of-scope records. Student fees cannot be described as zero based on the handbook table.
 - **RAI2 (scope and fallback).** Unaffected at data level; gaps and conflicts are recorded, not removed.
 
 ---
@@ -206,23 +203,20 @@ required is in `docs/week4_rights_verification.md`.
 
 **GO WITH CONDITIONS.**
 
-The corpus is complete, fully traceable and gated (R1-R4, R7 pass). The data-level defects found in
+The 373 K2 chunks pass the checked completeness, provenance and approval-gate rules (R1-R4, R7). The data-level defects found in
 this review are resolved: broken S17 fragments were re-chunked with overlap, navigation and divider
 pages excluded with evidence, symbols and the duplicate removed, topic tags added, and source
-precedence made operational through `authority_rank`. No HOLD-level defect was found.
+precedence recorded through `authority_rank`. Retrieval enforcement remains a future implementation task.
 
-Conditions to clear before Topic 7 relies on the corpus (the one remaining step is human):
+Verified knowledge and conditions for Topic 7:
 
-1. Done: the fee, fines, loan, replacement and registration tables are verified against the rendered
-   handbook pages (`docs/week4_fee_fines_crosscheck.md`); the S09-vs-S16 fine conflict is resolved and
-   no open table flags remain. Verify any non-table S02 prose only if it is used for answering.
+1. The listed K3 facts are verified against S02: the student membership fee wording on PDF system page p18, undergraduate loan limits on p25, and fines and replacement values on p28. All six replacement records cite p28. The RM50 transfer fee on p21 belongs to the services description for Corporate membership (within the country) and is excluded from undergraduate V1 retrieval. Other OCR prose and the payable university fee amount are not established. Verify any additional OCR prose before approving it for answering.
 2. Confirm every supported-task policy (membership, circulation, general rules) is captured from S02,
    and make Topic 7 retrieval honour `authority_rank`.
 3. Verify source-text redistribution rights; keep all extracted text local until then.
 4. Optional: re-OCR the kept S02 pages in Colab with tesseract 5.3.4; run a despacing pass on S17.
 
-S02 answering stays blocked until table/number verification. S17 remains supplementary and cannot
-override S02 or a newer official notice.
+All 373 K2 chunks remain blocked from answering. The 20 separately checked, in-scope K3 records may be used by a future retriever only after scope, applicability and authority controls are implemented. S17 remains supplementary and cannot override S02 or a newer applicable official notice.
 
 ---
 
@@ -239,7 +233,7 @@ override S02 or a newer official notice.
 | Source rights-verification record | `docs/week4_rights_verification.md` | Yes |
 | Fee/fines/loan cross-check | `docs/week4_fee_fines_crosscheck.md` | Yes |
 | Verified fee/fines table | `docs/week4_verified_fees.csv` | Yes |
-| Approved policy tables (K3, for Topic 7) | `data/approved_policy_tables.json` | Yes |
+| Approved policy tables (20 in-scope K3 records; 1 corporate record excluded) | `data/approved_policy_tables.json` | Yes |
 | Coverage chart | `docs/week4_coverage_by_source.png` | Yes |
 | This report | `docs/week4_data_quality_report.md` | Yes |
 | Reviewed cleaned corpus | `data/prepared_chunks_clean.jsonl`, `data/chunks_clean.pkl` | No, kept local (rights to verify) |

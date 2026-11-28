@@ -94,15 +94,20 @@ Remediation applied (all recorded, none silent):
 
 - S17 re-chunked with overlap (paragraph/sentence aware, size 500, overlap 80): broken fragments such
   as `ties.` or `Lumpur` are gone; 20 fragments became 11 complete headings.
-- 7 S17 FAQ navigation pages (cover + section dividers) and 5 S02 divider photo pages excluded and
+- 7 S17 FAQ navigation pages (cover + section dividers) and 5 S02 chunks from 3 divider photo pages excluded and
   logged ([excluded-records log](docs/week4_excluded_records.csv)); divider titles kept as
   `faq_section` / `handbook_section` topic tags.
 - 4 S17 lost `U+FFFD` symbols stripped; the S17 page-32 duplicate removed during reconstruction.
-- Source precedence made operational: every chunk now carries `authority_rank` (S02 = 1 primary,
+- Source precedence recorded in metadata: every chunk carries `authority_rank` (S02 = 1 primary,
   S17 = 2 supplementary).
 - 11 broken-word spacing splits in S17 (`Ema il`, `Ma terials`) dictionary-merged and logged;
   near-duplicate and cross-source overlap checked lexically (4 within-source pairs flagged, 0
-  cross-source); S02 supported-task coverage confirmed (membership, borrowing/renewal, fines/rules). The fee, fines and loan tables were cross-checked against the official UTM HTML pages, verifying most values and resolving the S09-vs-S16 journal-fine conflict (RM0.50/day by handbook authority). The fee, fines, replacement and registration tables were then verified against the rendered handbook pages, so no open table flags remain.
+  cross-source). Keyword checks identify membership, borrowing/renewal and fines/rules terms in
+  the sampled S02 pages; full policy and exception coverage still requires review. The listed K3
+  facts are checked against rendered S02 pages. The student membership table on PDF system p18
+  states "Refer university fees rate"; a payable fee amount is not established. The six replacement
+  records and fines cite p28; the loan table cites p25. The RM50 fee on p21 is specific to Corporate
+  membership (within the country) and is excluded from undergraduate V1 retrieval.
 
 Headline findings (full evidence in the report):
 
@@ -115,9 +120,12 @@ Headline findings (full evidence in the report):
 - S02 300 DPI re-OCR was tested and held: the local OCR engine misread text and tables stayed
   jumbled, so it is deferred to Colab (tesseract 5.3.4) plus human table review rather than degrading
   the primary source.
-- Quality gate: **GO WITH CONDITIONS**. The S02 fee/fines/loan tables are now verified against the rendered handbook pages (no open flags);
-  the remaining conditions are source-text redistribution rights and making Topic 7 retrieval honour
-  `authority_rank`.
+- Quality gate: **GO WITH CONDITIONS**. The knowledge file contains 20 in-scope K3 records and
+  one excluded corporate transfer record. All 373 K2 chunks remain unapproved. The listed K3 facts
+  are checked; other OCR prose and university fee amounts are not established. Remaining work
+  includes policy coverage, source-text redistribution rights and implementing retrieval controls
+  for approval, applicability and `authority_rank`.
+
 
 ### Week 4 repository artefacts
 
@@ -135,8 +143,8 @@ Headline findings (full evidence in the report):
 
 The reviewed corpus (`data/prepared_chunks_clean.jsonl` and `data/chunks_clean.pkl`) is the Topic 4
 output that later stages must use. From **Topic 7 (Week 9)** onward, embedding, indexing and retrieval
-use this reviewed Topic 4 corpus and must honour `authority_rank`, not the original Topic 3 prepared
-data. For fee, fines, loan and replacement values, Topic 7 should retrieve the verified records in
+use the reviewed Topic 4 corpus for preparation. Answering must use explicitly approved records and
+honour applicability and `authority_rank`; the 373 K2 chunks remain blocked until individual approval. For fee, fines, loan and replacement values, Topic 7 should retrieve the verified records in
 `data/approved_policy_tables.json` (K3-approved, with source and page provenance) instead of the raw
 S02 OCR text. These corpus files stay local because source-text redistribution permission is not verified;
 only public-safe evidence is committed.

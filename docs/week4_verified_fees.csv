@@ -1,22 +1,22 @@
 category,item_type,value,unit,status,primary_source,corroborating_source,note
-loan,Open Access,10 books / 2 weeks,per loan,Verified,S02 p25 (rendered),S09,2 renewals
-loan,Closed Access,1 item / 2 days,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3/3days - handbook governs
-loan,Bound Journals,1 book / 3 days,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3 - handbook governs
-loan,Current Journals,1 book / overnight,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3/3days - handbook governs
-loan,Reference,1 book / 3 days,per loan,Verified,S02 p25 (rendered),,S09 webpage says 3 - handbook governs
-loan,Audio Visual,1 item / 2 hours or overnight,per loan,Verified,S02 p25 (rendered),,loanable - S09 webpage wrongly said not-for-loan
-fine,Open Access,RM0.20,per day,Verified,S02 FINES page,S09/S16,
-fine,Closed Access,RM0.50,per day,Verified,S02 FINES page,S09,rendered page confirms per day; S16 per-hour outdated
-fine,Reference,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated
-fine,Bound Journals,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated
-fine,Current Journals,RM0.50,per day,Verified,S02 FINES page,S09,S16 RM0.20 outdated
-fine,Audio Visual (external),RM0.50,per day,Verified,S02 FINES page,S09,
-fine,Lost/damaged room key,RM30.00,per incident,Verified,S02 p16,,
-replacement,Books,Price of book + RM25.00,per item,Verified,S02 REPLACEMENT page,,or same edition/latest + RM25
-replacement,UTM Theses,RM350/RM450/RM550 + RM25.00,per item,Verified,S02 REPLACEMENT page,,First Degree/Masters/PhD
-replacement,Measured Drawings,RM500.00 + RM25.00,per item,Verified,S02 REPLACEMENT page,,
-replacement,Journal Article,RM75.00 + RM25.00,per item,Verified,S02 REPLACEMENT page,,max BLDSC charge
-replacement,Rare Materials,Double price + RM25.00,per item,Verified,S02 REPLACEMENT page,,
-replacement,processing fee,RM25.00,per replacement,Verified,S02 REPLACEMENT page,,applies to all replacements
-registration,Enrolled UTM undergraduate,None,-,Verified,S02 memberships pages,S15,covered by university fees; no UTM-student row
-registration,Membership transfer,RM50.00,per transfer,Verified,S02 p21,S15,
+loan,Open Access,10 books / 2 weeks,per loan,Verified,S02 PDF system p25 (rendered),S09,2 renewals
+loan,Closed Access,1 item / 2 days,per loan,Verified,S02 PDF system p25 (rendered),,S09 webpage says 3/3days - handbook governs
+loan,Bound Journals,1 book / 3 days,per loan,Verified,S02 PDF system p25 (rendered),,S09 webpage says 3 - handbook governs
+loan,Current Journals,1 book / overnight,per loan,Verified,S02 PDF system p25 (rendered),,S09 webpage says 3/3days - handbook governs
+loan,Reference,1 book / 3 days,per loan,Verified,S02 PDF system p25 (rendered),,S09 webpage says 3 - handbook governs
+loan,Audio Visual,1 item / 2 hours or overnight,per loan,Verified,S02 PDF system p25 (rendered),,loanable - S09 webpage wrongly said not-for-loan
+fine,Open Access,RM0.20,per day,Verified,S02 PDF system p28,S09/S16,
+fine,Closed Access,RM0.50,per day,Verified,S02 PDF system p28,S09,rendered page confirms per day; S16 per-hour outdated
+fine,Reference,RM0.50,per day,Verified,S02 PDF system p28,S09,S16 RM0.20 outdated
+fine,Bound Journals,RM0.50,per day,Verified,S02 PDF system p28,S09,S16 RM0.20 outdated
+fine,Current Journals,RM0.50,per day,Verified,S02 PDF system p28,S09,S16 RM0.20 outdated
+fine,Audio Visual (external),RM0.50,per day,Verified,S02 PDF system p28,S09,
+fine,Lost/damaged room key,RM30.00,per incident,Verified,S02 PDF system p16,,
+replacement,Books,Price of book + RM25.00,per item,Verified,S02 PDF system p28,,or same edition/latest + RM25
+replacement,UTM Theses,RM350/RM450/RM550 + RM25.00,per item,Verified,S02 PDF system p28,,First Degree/Masters/PhD
+replacement,Measured Drawings,RM500.00 + RM25.00,per item,Verified,S02 PDF system p28,,
+replacement,Journal Article,RM75.00 + RM25.00,per item,Verified,S02 PDF system p28,,max BLDSC charge
+replacement,Rare Materials,Double price + RM25.00,per item,Verified,S02 PDF system p28,,
+replacement,processing fee,RM25.00,per replacement,Verified,S02 PDF system p28,,applies to all replacements
+registration,Enrolled UTM undergraduate,Refer university fees rate,yearly fees,Verified wording only,S02 PDF system p18,,The handbook does not state a zero annual fee or separate registration amount
+registration,Corporate membership transfer (out of V1 scope),RM50.00,per transfer,Verified; excluded from V1 retrieval,S02 PDF system p21,S15,S02 p21 Corporate membership (within the country) services description; excluded from undergraduate V1; not a staff fee

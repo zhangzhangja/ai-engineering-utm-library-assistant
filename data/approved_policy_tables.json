@@ -1,12 +1,12 @@
 {
   "schema": "utm-library-approved-policy-tables/v1",
-  "generated_at": "2026-11-24",
-  "scope": "UTM undergraduate library services (V1)",
+  "generated_at": "2026-11-28",
+  "scope": "UTM undergraduate library services (V1); out-of-scope records excluded from retrieval_records",
   "knowledge_stage": "K3_approved",
   "approved_for_answering": true,
-  "authority_note": "Primary authority is the S02 UTM Library Handbook 2026/2027, verified against its rendered pages. Official UTM webpages (S09/S15/S16) corroborate. Where S16 (Fines page) disagreed on journal/reference/closed-access rates, the handbook governs (RM0.50 per day). Correction: the S09 loan-periods webpage conflicts with the handbook on undergraduate per-material limits (webpage says 3 items; handbook says 1 and lists Audio Visual as loanable 2h/overnight). The handbook (rendered page) governs.",
+  "authority_note": "S02 UTM Library Handbook 2026/2027 governs the verified 2026/2027 tables. S09 and S16 webpages conflict with S02 for some loan limits and fines; the conflict is documented. Undergraduate yearly fees are stated as \"Refer university fees rate\" on S02 PDF page 18; no zero-fee amount is established.",
   "rights_status": "Source-text redistribution not yet verified; these records hold factual figures with attribution, not source prose. See docs/week4_rights_verification.md.",
-  "usage": "Topic 7 may embed and retrieve the 'retrieval_records' directly; each carries authority_rank=1 and page provenance so answers can cite source and page (FR3/RAI1). Do not override these with lower-authority OCR text.",
+  "usage": "Only retrieval_records are approved for undergraduate V1 answering. The future retriever must enforce scope, source applicability and authority_rank. All 373 K2 chunks remain blocked. Page locators use one-based PDF reader system page numbers. No deployed retriever exists yet.",
   "sources": {
     "S02": {
       "title": "UTM Library Handbook 2026/2027",
@@ -50,7 +50,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p25 (loan limits) and p18 (renewal eligibility); visually checked 2026-11-28."
     },
     {
       "id": "POL-LOAN-UG-CLOSED",
@@ -68,7 +68,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p25; visually checked 2026-11-28.",
       "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
@@ -87,7 +87,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p25; visually checked 2026-11-28.",
       "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
@@ -106,7 +106,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p25; visually checked 2026-11-28.",
       "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
@@ -125,7 +125,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p25; visually checked 2026-11-28.",
       "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
     },
     {
@@ -144,8 +144,8 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page p25 (undergraduate loan table), 2026-11-24",
-      "note": "S09 webpage lists different figures (3 items/3 days); handbook governs by source precedence."
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p25; visually checked 2026-11-28.",
+      "note": "S09 webpage states not for loan; S02 PDF system page p25 lists 1 item for 2 hours / overnight. The handbook governs by source precedence."
     },
     {
       "id": "POL-FINE-OPEN",
@@ -166,7 +166,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-FINE-CLOSED",
@@ -186,7 +186,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-FINE-REF",
@@ -206,7 +206,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-FINE-BJ",
@@ -226,7 +226,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-FINE-CJ",
@@ -246,7 +246,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-FINE-AV",
@@ -266,7 +266,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-FINE-ROOMKEY",
@@ -284,7 +284,7 @@
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p16; visually checked 2026-11-28."
     },
     {
       "id": "POL-REPL-PROCESSING",
@@ -296,12 +296,12 @@
         "unit": "per replacement"
       },
       "source_id": "S02",
-      "page": "REPLACEMENT page",
+      "page": 28,
       "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-REPL-BOOK",
@@ -314,12 +314,12 @@
         "by_edition": "same edition/latest + RM25.00"
       },
       "source_id": "S02",
-      "page": "REPLACEMENT page",
+      "page": 28,
       "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-REPL-THESIS",
@@ -334,12 +334,12 @@
         "processing": "RM25.00"
       },
       "source_id": "S02",
-      "page": "REPLACEMENT page",
+      "page": 28,
       "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-REPL-JOURNAL-ARTICLE",
@@ -351,12 +351,12 @@
         "by_value": "RM75.00 (max BLDSC) + RM25.00"
       },
       "source_id": "S02",
-      "page": "REPLACEMENT page",
+      "page": 28,
       "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-REPL-MEASURED-DRAWING",
@@ -368,12 +368,12 @@
         "by_value": "RM500.00 + RM25.00"
       },
       "source_id": "S02",
-      "page": "REPLACEMENT page",
+      "page": 28,
       "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
       "id": "POL-REPL-RARE",
@@ -385,38 +385,40 @@
         "by_value": "double price + RM25.00"
       },
       "source_id": "S02",
-      "page": "REPLACEMENT page",
+      "page": 28,
       "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p28; visually checked 2026-11-28."
     },
     {
-      "id": "POL-REG-UG-NONE",
+      "id": "POL-REG-UG-FEES-RATE",
       "topic": "membership.registration",
       "applies_to": "enrolled UTM undergraduate (Degree) student",
-      "statement": "Enrolled UTM undergraduate students do not pay a separate library registration or annual fee; library membership is covered by university fees.",
+      "statement": "For registered full-time UTM Degree students, the handbook lists yearly fees as \"Refer university fees rate\"; it does not specify a separate library registration amount or a zero annual fee.",
       "value": {
-        "registration": "none",
-        "annual": "none",
-        "basis": "covered by university fees"
+        "yearly_fees": "Refer university fees rate",
+        "separate_registration_amount": "not specified on the cited handbook page",
+        "zero_fee_claim": "not established"
       },
       "source_id": "S02",
       "page": 18,
-      "corroborated_by": [
-        "S15"
-      ],
+      "corroborated_by": [],
       "authority_rank": 1,
       "knowledge_stage": "K3_approved",
       "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
-    },
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p18; visually checked 2026-11-28.",
+      "note": "Do not answer that UTM students pay no annual fee; refer the student to the current university fee schedule if an amount is requested."
+    }
+  ],
+  "out_of_scope_note": "External, corporate, alumni, UTM Family and UTM SPACE membership charges are outside the undergraduate V1 scope; do not apply them to enrolled undergraduate students. The corporate-only membership-transfer fee is preserved in out_of_scope_records for audit, not in retrieval_records.",
+  "out_of_scope_records": [
     {
       "id": "POL-REG-TRANSFER",
       "topic": "membership.registration",
-      "applies_to": "members with transfer",
-      "statement": "The membership transfer fee is RM50.00.",
+      "applies_to": "Corporate membership (within the country); outside undergraduate V1 scope",
+      "statement": "The services description for Corporate membership (within the country) lists a RM50.00 membership transfer fee.",
       "value": {
         "fee": "RM50.00",
         "unit": "per transfer"
@@ -427,10 +429,10 @@
         "S15"
       ],
       "authority_rank": 1,
-      "knowledge_stage": "K3_approved",
-      "approved_for_answering": true,
-      "verified": "rendered handbook page, 2026-11-24"
+      "knowledge_stage": "K3_verified_out_of_scope",
+      "approved_for_answering": false,
+      "verified": "S02 UTM Library Handbook 2026/2027, PDF system page p21; visually checked 2026-11-28.",
+      "exclusion_reason": "S02 PDF system page p21 lists this fee under Corporate membership (within the country). It is a corporate membership fee, not a general undergraduate transfer fee or a staff fee."
     }
-  ],
-  "out_of_scope_note": "External, corporate, alumni, UTM Family and UTM SPACE membership charges exist in the handbook but are outside the undergraduate V1 scope and must never be applied to enrolled undergraduates."
+  ]
 }

@@ -11,7 +11,7 @@ This directory contains public-safe lineage and execution metadata for the Week 
 - `pipeline_v1/handbook_html5_ocr/html5_acquisition_audit.json`: Official HTML5 publication audit.
 - `pipeline_v1/handbook_html5_ocr/pipeline_manifest.json`: S02 OCR-branch processing and validation metadata.
 
-- `approved_policy_tables.json`: Topic 4 verified fee, fines, loan and replacement tables (K3-approved, factual figures with source and page provenance) for Topic 7 retrieval.
+- `approved_policy_tables.json`: Topic 4 policy knowledge for Topic 7: 20 in-scope K3 records in `retrieval_records` and one corporate transfer record excluded in `out_of_scope_records`. Every record has S02 provenance, a PDF system page number and a verification date. The 373 K2 chunks remain unapproved.
 
 ## Retained locally
 
